@@ -1,16 +1,7 @@
 import random
+import Comon
 
-capitulo = 0
-
-def titulo(_tit):
-    global capitulo
-    capitulo += 1
-    print()
-    print("#####################################")
-    print("##", capitulo, "##  " + _tit)
-    print("#####################################")
-
-titulo("Bucle while")
+Comon.titulo("Bucle while")
 
 a = 0
 while a<3:
@@ -20,7 +11,7 @@ print("\nFuera del while:")
 print("a = {}".format(a))
 
 
-titulo("Bucle while: break")
+Comon.titulo("Bucle while: break")
 a = 5
 while a: # True if a <> 0
     print(a, end=' ')
@@ -30,7 +21,7 @@ while a: # True if a <> 0
 print("\nFuera del while:")
 print("a = {}".format(a))
 
-titulo("Bucle while: continue")
+Comon.titulo("Bucle while: continue")
 a = 12
 while bool(a):
     a -= 1
@@ -39,7 +30,7 @@ while bool(a):
     print (a, end=' ')
 print("\nFuera del while:")
 
-titulo("Bucle while: pass")
+Comon.titulo("Bucle while: pass")
 a = 6
 while a:
     print("    Dentro del while")
@@ -47,7 +38,7 @@ while a:
     a -= 1
 print("Fuera del while")
 
-titulo("Bucle while: else")
+Comon.titulo("Bucle while: else")
 a = 128
 b = a // 2
 while b > 1:
@@ -59,7 +50,7 @@ else:
     print("    {} es primo".format(a))
 print("Fuera del while")
 
-titulo("Bucle for")
+Comon.titulo("Bucle for")
 print("\nFor: Lista de String")
 for s in ["Me", "gusta", "Python!"]:
     print(s, end=' ')
@@ -79,7 +70,7 @@ print("\nFin del for")
 
 print()
 
-titulo("Diccionario")
+Comon.titulo("Diccionario")
 dict_keys = ['nombre', 'apellidos', 'edad']
 dict_values = ['Guido', 'van Rossum', '60']
 dict1 = dict(zip(dict_keys, dict_values)) # Creamos el diccionario
@@ -104,7 +95,7 @@ print("Items : ", type(dict1.items()), " : ", dict1.items())
 # Acceder a una vista de diccionario
 print("Secundo elemento de las llaves :", list (dict1.keys())[1])
 
-titulo("Tuplas")
+Comon.titulo("Tuplas")
 t = [(1, 2), (3, 4), (5, 6)]
 for x, y in t:
     print ("x + y = ", x + y)
@@ -115,7 +106,7 @@ for a, b in zip(list_a, list_b):
     m = max(a, b) # max(a, b) devuelve el máximo entre a y b
     print("maximo entre {} y {} = ".format(a, b), m)
 
-titulo("Range")
+Comon.titulo("Range")
 print("range(5) : ", end = '')
 for n in range(5):
     print(n, end = ", ")
@@ -129,7 +120,7 @@ for n in range(-5, 5, 2): # Elementos -5 a 5 en saltos de 2
     print(n, end = ", ")
 print()
 
-titulo("Ejemplos Pythónicos")
+Comon.titulo("Ejemplos Pythónicos")
 
 
 
@@ -166,13 +157,13 @@ for i, letra in enumerate(letras):
     if letra in vocales:
         print("{} en la posición {}".format(letra, i))
 
-titulo("enumerate")
+Comon.titulo("enumerate")
 abcde = sorted(letras)[:5]
 print("enumerate(letras) = ", list(enumerate(letras)))
 print("enumerate(abcde) = ", list(enumerate(abcde)))
 print("enumerate(abcde, 10) = ", list(enumerate(abcde, 10))) #Empezando en 10
 
-titulo("Iteradores")
+Comon.titulo("Iteradores")
 
 for num in [1, 2, 3, 4, 5, 6]:
     print(num ** 2, end= ' ')

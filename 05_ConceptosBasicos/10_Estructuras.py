@@ -1,15 +1,6 @@
+import Comon
 
-capitulo = 0
-
-def titulo(_tit):
-    global capitulo
-    capitulo += 1
-    print()
-    print("#####################################")
-    print("##", capitulo, "##  " + _tit)
-    print("#####################################")
-
-titulo("Conditional if…elif…else")
+Comon.titulo("Conditional if…elif…else")
 
 # Programa que pide una nota por consola y valora si el alumno ha aprobado o no.
 notaIn=int(input("Introduzca nota:"))
@@ -113,7 +104,7 @@ else:
     else:
         print("Puedes comprar el coche.")
 
-titulo("Operador ternario")
+Comon.titulo("Operador ternario")
 
 # Operador ternario
 num = 12
@@ -128,7 +119,7 @@ else:
     var2="impar"
 print(var2)
 
-titulo("El bucle for")
+Comon.titulo("El bucle for")
 
 # El bucle for
 # Ejecuta el print dies veces
@@ -228,7 +219,7 @@ for x in frutas:
 for x in [0, 1, 2]:
     pass
 
-titulo("El bucle while")
+Comon.titulo("El bucle while")
 
 # WHILE
 # Imprime edad cuando el contador llegue a 18
@@ -268,7 +259,7 @@ while num < 6:
         break
     num += 1    
 
-titulo("Listas")
+Comon.titulo("Listas")
 
 # LISTAS
 """
@@ -300,7 +291,7 @@ def miFunccion(listaFrutas):
 frutas = ["Manzana", "banana", "cereza"]
 miFunccion(frutas)
 
-titulo("Tuplas")
+Comon.titulo("Tuplas")
 
 # TUPLAS
 """
@@ -368,7 +359,7 @@ print(num2)
 print(valor1)
 print(num3)
 
-titulo("Diccionarios")
+Comon.titulo("Diccionarios")
 
 # DICCIONARIOS
 """Los diccionarios, también llamados matrices asociativas, deben su nombre a que son
@@ -510,7 +501,7 @@ myfamily = {
 }
 print(myfamily["nino1"])
 
-titulo("Sets")
+Comon.titulo("Sets")
 
 # SETs, conjuntos
 """
@@ -611,7 +602,7 @@ print(set1)
 
 # Tanto union() como update() excluirán cualquier elemento duplicado.
 
-titulo("Funciones")
+Comon.titulo("Funciones")
 
 # -------------------------------------
 # FUNCIONES

@@ -1,12 +1,4 @@
-capitulo = 0
-
-def titulo(_tit):
-    global capitulo
-    capitulo += 1
-    print()
-    print("#####################################")
-    print("##", capitulo, "##  " + _tit)
-    print("#####################################")
+import Comon
 
 # Definición de una excepción - class :
 class miPropiaExcepcion(Exception): #Las excepciones heredan de Exception
@@ -15,14 +7,14 @@ class miPropiaExcepcion(Exception): #Las excepciones heredan de Exception
     def __str__(self):
         return str(self.valor)
 
-titulo("funcion indexador")
+Comon.titulo("funcion indexador")
 
 def indexador(objeto, indice):
     return objeto[indice]
 
 print("+ pos 0 de 'Python' = ", indexador('Python', 0))
 
-titulo("Try, Except")
+Comon.titulo("Try, Except")
 
 # try, except
 try:
@@ -36,7 +28,7 @@ except (TypeError): # Captura TypeError
 print('Hemos salido del try-catch')
 print()
 
-titulo("Raise")
+Comon.titulo("Raise")
 # raise
 try :
     raise IndexError('Excepción lanzada manualmente')
@@ -46,7 +38,7 @@ except (IndexError): # Captura IndexError
 print('Hemos salido del try-catch')
 print()
 
-titulo("Assert")
+Comon.titulo("Assert")
 # assert (no recomendado en producción)
 a = 10
 b = 0
@@ -54,7 +46,7 @@ assert(a > b), 'A tiene que ser mayor que B' # Si se cumple no salta el Assertio
 print('Si se muestra esto es que no ha saltado el assert')
 print()
 
-titulo("Creando excepciones")
+Comon.titulo("Creando excepciones")
 # Creando excepciones
 try:
     raise miPropiaExcepcion("Mensaje1")
@@ -63,7 +55,7 @@ except miPropiaExcepcion:
 print()
 # raise(miPropiaExcepcion('Mensaje Error : Mensaje especifico'))
 
-titulo("finally")
+Comon.titulo("finally")
 # finally
 try:
     indexador('Python', 5)
@@ -72,7 +64,7 @@ finally:
     print('Esto se ejecuta includo cuando salta la excepción o no')
 print('****Esto no se ejecuta cuando salta la excepción')
 
-titulo("else")
+Comon.titulo("else")
 # else
 
 def divide(x, y):

@@ -1,19 +1,11 @@
+import Comon
 # VARIABLES
 # Lo ideal es declarar e inicializar siempre las variables.
 # -----------------------------------------------------------
 # En Python podemos asignar una variable a otra variable diferente.
 
-capitulo = 0
 
-def titulo(_tit):
-    global capitulo
-    capitulo += 1
-    print()
-    print("#####################################")
-    print("##", capitulo, "##  " + _tit)
-    print("#####################################")
-
-titulo("Declaración e Inicialización")
+Comon.titulo("Declaración e Inicialización")
 var = "Hola mundo"
 var2 = var
 print("var= ", var)
@@ -61,7 +53,7 @@ print("n_edad en string:: n_edad = ", n_edad)
 NUMEROPI = 3.14159
 print("constante:: NUMEROPI = ", NUMEROPI)
 
-titulo("Declaración de un boolean")
+Comon.titulo("Declaración de un boolean")
 # Declaración de un boolean
 es_True = True
 es_False = False
@@ -77,7 +69,7 @@ print("Boolean:: 10 == 9 ?", 10 == 9)
 print("Boolean:: 10 < 9 ?", 10 < 9)
 
 # Declaración múltiple
-titulo("Declaración múltiple")
+Comon.titulo("Declaración múltiple")
 # En una sola instrucción, estamos declarando tres variables: a, b, c, y asignándoles un valor concreto a cada una.
 a, b, c = 'string', 15, True
 print("Declaración múltiple:: a, b, c =", a, b, c)
@@ -88,7 +80,7 @@ c = True
 print("Declaración individual:: a, b, c =", a, b, c)
 
 # Para verificar el tipo de cualquier objeto en Python, usamos la función type() :
-titulo("Verificar el tipo")
+Comon.titulo("Verificar el tipo")
 print("type(n_edad) = ", type(n_edad))
 print("type(n_numero) = ", type(n_numero))
 print("type(s_nombre) = ", type(s_nombre))
@@ -97,7 +89,7 @@ print("type(es_True) = ", type(es_True))
 print("type(es_False) = ", type(es_False))
 
 # Forzado de tipo, CASTING:
-titulo("Casting")
+Comon.titulo("Casting")
 
 # Forzado de tipo Enteros:
 x = int(1) # x Valdrá 1
@@ -145,7 +137,7 @@ print("Casting:: s_texto_2 = str(n_numero_6) : ", type(s_texto_2), s_texto_2)
 
 
 # COMENTARIOS
-titulo("Comentarios")
+Comon.titulo("Comentarios")
 # Los comentarios son anotaciones que pondremos en nuestro código que el programa no va a tener en cuenta.
 # Existen dos tipos de comentarios:
 
@@ -157,7 +149,7 @@ varias líneas"""
 
 
 # TRABAJAR CON STRINGS
-titulo("String")
+Comon.titulo("String")
 """Los strings son secuencias de caracteres de texto.
 Todos los objetos en Python se engloban en dos categorías: mutables o inmutables.
 Los tipos básicos mutables son las listas, los diccionarios y los sets.
@@ -229,7 +221,7 @@ print("String:: 'Vamos reemplazar la palabra casa'.replace('casa', 'hogar') : ",
 # https://www.freecodecamp.org/espanol/news/metodos-de-string-de-pythonexplicados-con-ejemplo/
 
 # Salida directa de datos
-titulo("Salida directa de datos")
+Comon.titulo("Salida directa de datos")
 print("print():: En esta ocasión hemos imprimido por pantalla este string")
 # Salida de datos calculados
 n_numero_1 = 4
@@ -239,7 +231,7 @@ print("print()::El resultado de sumar" , n_numero_1, "y" , n_numero_2 , "es" , (
 #print("El resultado de sumar " + n_numero_1 + " y " + n_numero_2 + " es " + (n_numero_1+n_numero_2))
 
 # Entrada directa de datos
-titulo("Entrada directa de datos")
+Comon.titulo("Entrada directa de datos")
 
 s_nombreIntroducido = "toto" #input("Introduzca su nombre: ")
 print("inputf():: Bienvenido", s_nombreIntroducido)
@@ -252,7 +244,7 @@ s_edad = int("46") #int(input("Introduzca su edad:"))
 print("inputf():: El año que viene tendrá usted", s_edad + 1, "años")
 
 # Operadores
-titulo("Operadores")
+Comon.titulo("Operadores")
 
 # Módulo. Nos devuelve el resto de una división:
 n_numerador = 85
@@ -283,7 +275,7 @@ n_numero6 = n_numero6 +1
 print("Operadores :: n_numero6 = n_numero6 + 1 : ", n_numero6)
 
 # Operadores lógicos
-titulo("Operadores lógicos")
+Comon.titulo("Operadores lógicos")
 
 a = True
 b = False
@@ -314,7 +306,7 @@ else:
     print("Operadores lógicos :: No está dentro de los 20's ni 30's")
 
 # Dirección de memoria
-titulo("Dirección de memoria")
+Comon.titulo("Dirección de memoria")
 
 # Obtener la dirección de memoria de una variable
 a = 65

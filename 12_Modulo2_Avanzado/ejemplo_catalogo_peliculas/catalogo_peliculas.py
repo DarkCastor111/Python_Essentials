@@ -8,7 +8,6 @@ class CatalogoPeliculas:
     def iniciar(self):
         salir = False
         print('### Catalogo de peliculas ###')
-        self.servicio_catalogo.mostrar_peliculas()
         while not salir:
             try:
                 opcion = self.mostrar_menu()
@@ -32,7 +31,11 @@ class CatalogoPeliculas:
             self.servicio_catalogo.grabar_pelicula(nueva_pelicula)
             print('Pelicula agregada correctamente.')
         elif opcion == 2:
-            self.servicio_catalogo.mostrar_peliculas()
+            pelis_catalogo = self.servicio_catalogo.leer_peliculas()
+            numero = 0
+            for peli in pelis_catalogo:
+                numero += 1
+                print(f'#{numero:02} {peli}')
         elif opcion == 3:
             self.servicio_catalogo.eliminar_catalogo()
             print('Catalogo eliminado correctamente.')

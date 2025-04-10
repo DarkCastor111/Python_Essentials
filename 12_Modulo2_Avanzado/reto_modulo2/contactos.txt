@@ -1,0 +1,3 @@
+batman,555123456,batman@gotham.city
+superman,555341657,super@kripton.planet
+hulk,555439876,hulk@marvel.com

@@ -1,2 +1,4 @@
 # Ignorer l'environnement virtuel
 env_Modulo3_BDD/
+# Fichiers d'exécution
+__pycache__

@@ -16,6 +16,7 @@ class ClienteDAO:
             cur = con.cursor()
             cur.execute(cls.SELECCIONAR_TODOS)
             lineas = cur.fetchall()
+            print(f'==> {cur.rowcount} cliente(s) encontrado(s)')
             # Mapeo clase-tabla cliente
             clientes = []
             for linea in lineas:
@@ -69,6 +70,7 @@ class ClienteDAO:
             valores =(cliente.nombre, cliente.apellido, cliente.membresia)
             cur.execute(cls.CREAR, valores)
             con.commit()
+            print(f'==> Cliente {cliente} añadido correctamente!')
             return cur.rowcount
 
         except Exception as e:
@@ -87,6 +89,7 @@ class ClienteDAO:
             valores =(cliente.nombre, cliente.apellido, cliente.membresia, cliente.id)
             cur.execute(cls.ACTUALIZAR, valores)
             con.commit()
+            print(f'==> Cliente {cliente} actualizado correctamente!')
             return cur.rowcount
         except Exception as e :
             print(f'Error a actualizar el cliente {cliente} : {e}')
@@ -104,6 +107,7 @@ class ClienteDAO:
             valores =(cliente.id,)
             cur.execute(cls.ELIMINAR, valores)
             con.commit()
+            print(f'==> Cliente #{cliente.id} eliminado correctamente!')
             return cur.rowcount
         except Exception as e :
             print(f'Error a eliminar el cliente #{cliente.id} : {e}')

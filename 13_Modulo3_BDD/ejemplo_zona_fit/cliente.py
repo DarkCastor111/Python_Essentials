@@ -6,4 +6,4 @@ class Cliente:
         self.membresia = p_membresia
 
     def __str__(self):
-        return f'Cliente: #{self.id} - {self.nombre} {self.apellido} - {self.membresia}'
+        return f'#{self.id} - {self.nombre} {self.apellido} - {self.membresia}'

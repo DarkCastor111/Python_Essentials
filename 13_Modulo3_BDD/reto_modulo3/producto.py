@@ -1,8 +1,8 @@
 class Producto:
     def __init__(self, p_nombre, p_cantidad, p_precio, p_categoria):
         self.nombre = p_nombre
-        self.cantidad = p_cantidad
-        self.precio = p_precio
+        self.cantidad = int(p_cantidad)
+        self.precio = float(p_precio)
         self.categoria = p_categoria
 
     def __str__(self):

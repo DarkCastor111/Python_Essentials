@@ -1,6 +1,6 @@
 from conexion import Conexion
 from producto import Producto
-from mysql.connector import IntegrityError
+from mysql.connector import IntegrityError, DataError
 
 class ProductoDAO:
     SELECCIONAR_TODOS = 'SELECT * FROM producto ORDER BY nombre'
@@ -64,6 +64,8 @@ class ProductoDAO:
 
         except IntegrityError as ie:
             print(f'Ya existe un producto con el mismo nombre : {prd.nombre}')   
+        except DataError as de:
+            print(f'Error de datos (tipo, tamaño, formato)')   
         except Exception as e:
             print(f'Ocurrio un error a la creación del producto {prd} : {e}')
         finally:
@@ -85,6 +87,8 @@ class ProductoDAO:
                 print(f'==> {cur.rowcount} productos actualizados !!')
             return cur.rowcount
 
+        except DataError as de:
+            print(f'Error de datos (tipo, tamaño, formato)')   
         except Exception as e:
             print(f'Ocurrio un error a la actualización del producto {prd} : {e}')
         finally:

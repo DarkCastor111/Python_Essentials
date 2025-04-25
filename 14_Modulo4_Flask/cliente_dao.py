@@ -42,19 +42,14 @@ class ClienteDAO:
             cur = con.cursor()
             valores = (id_cliente,)
             cur.execute(cls.SELECCIONAR_UNO, valores)
-            lineas = cur.fetchall()
-            cliente_encontrado = None
+            linea = cur.fetchone()
             # Mapeo clase-tabla cliente
-            for linea in lineas:
-                cliente_encontrado = Cliente(linea[0],
-                                  linea[1],
-                                  linea[2],
-                                  linea[3]
-                                  )
+            cliente_encontrado = Cliente(   linea[0], linea[1],
+                                            linea[2], linea[3] )
             print(f'{cur.rowcount} cliente encontrado : {cliente_encontrado}')
             return cliente_encontrado
         except Exception as e:
-            print(f'Ocurrio un error al seleccionar clientes : {e}')
+            print(f'Ocurrio un error al seleccionar un cliente por id : {e}')
         finally:
             if con is not None:
                 cur.close()

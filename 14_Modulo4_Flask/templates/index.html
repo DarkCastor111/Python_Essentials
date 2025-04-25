@@ -24,26 +24,40 @@
                     <!-- Formulario -->
                     <div class="border rounded-3 p-2">
                         <form class="" action="/guardar" method="post" autocomplete="off">
+                            {{ cl_form.csrf_token }}
+
+                            <!-- Id -->
+                            <!-- <input type="hidden" id="id" value="xx"> -->
+                            {{ cl_form.id }}
+
                             <!--Nombre-->
                             <div class="form-floating py-2">
-                                <input type="text" class="form-control" id="form_nombre" placeholder="Nombre"/>
-                                <label for="form_nombre">Nombre</label>
+                                <!-- <input type="text" class="form-control" id="form_nombre" placeholder="Nombre"/>
+                                <label for="form_nombre">Nombre</label> -->
+                                {{ cl_form.nombre(class="form-control", placeholder="Nombre") }}
+                                {{ cl_form.nombre.label }}
                             </div>
 
                             <!--Apellido-->
                             <div class="form-floating py-2">
-                                <input type="text" class="form-control" id="form_apellido" placeholder="Apellido"/>
-                                    <label for="form_apellido">Apellido</label>
-                                </div>
+                               <!-- <input type="text" class="form-control" id="form_apellido" placeholder="Apellido"/>
+                                    <label for="form_apellido">Apellido</label> -->
+                                {{ cl_form.apellido(class="form-control", placeholder="Apellido") }}
+                                {{ cl_form.apellido.label }}
+                            </div>
                             <!--Membresia-->
                             <div class="form-floating py-2">
-                                <input type="number" class="form-control" id="form_membresia" placeholder="Membresía"/>
-                                    <label for="form_membresia">Membresía</label>
+                                <!-- <input type="number" class="form-control" id="form_membresia" placeholder="Membresía"/>
+                                    <label for="form_membresia">Membresía</label> -->
+                                {{ cl_form.membresia(class="form-control", placeholder="Membresia") }}
+                                {{ cl_form.membresia.label }}
                             </div>
                             <!-- Botones -->
                             <div class="text-center py-2">
-                                <button type="submit" class="btn btn-warning btn-sm me-3">Guardar</button>
-                                <input type="reset" class="btn btn-danger btn-sm me-3" value="Limpiar"/>
+                                <!--<button type="submit" class="btn btn-warning btn-sm me-3">Guardar</button>-->
+                                {{ cl_form.guardar(class="btn btn-warning btn-sm me-3") }}
+                                <!-- <input type="reset" class="btn btn-danger btn-sm me-3" value="Limpiar"/>-->
+                                 <a href="/limpiar" class="btn btn-danger btn-sm me-3">Limpiar</a>
                             </div>
                         </form>
 

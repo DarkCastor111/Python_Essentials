@@ -1,0 +1,5 @@
+# Ignorer l'environnement virtuel
+env_Modulo4_Flask/
+# Fichiers d'exécution
+__pycache__
+*.pyc

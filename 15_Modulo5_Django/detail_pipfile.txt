@@ -1,0 +1,60 @@
+---
+
+### 📄 `django-ckeditor`
+- **Quoi :** Une intégration du célèbre éditeur de texte riche **CKEditor** dans **Django**.
+- **À quoi ça sert :** Permet aux utilisateurs d'écrire du contenu avec **mise en forme** (gras, italique, images, tableaux, etc.) dans les formulaires Django (ex: un champ `TextField` enrichi).
+- **Contexte typique :** CMS, blog, zone de texte admin.
+- **Installation rapide :** 
+
+---
+
+### 🖼 `Pillow`
+- **Quoi :** Une bibliothèque Python de traitement **d'images** (successeur de la bibliothèque PIL).
+- **À quoi ça sert :** Ouvrir, manipuler, redimensionner, convertir, sauvegarder des fichiers image (`.jpg`, `.png`, `.gif`, etc.) directement en Python.
+- **Utilisation typique :** 
+  - Upload d'images dans Django.
+  - Création de miniatures.
+  - Filtrage ou modification automatique d'images.
+- **Installation rapide :** 
+
+---
+
+### 🔍 `pylint`
+- **Quoi :** Un **analyseur statique** de code Python (linter).
+- **À quoi ça sert :** 
+  - Trouver automatiquement les erreurs de code.
+  - Vérifier que ton code respecte les bonnes pratiques PEP8.
+  - Calculer un **score de qualité** de ton code.
+- **Typique :** Utilisé dans CI/CD ou directement dans VSCode.
+
+---
+
+### 🔍 `pylint-django`
+- **Quoi :** Une extension de `pylint` spécialisée pour comprendre **les particularités de Django**.
+- **À quoi ça sert :**
+  - Améliorer l'analyse de code Django.
+  - Ne pas déclencher de fausses erreurs sur des patterns Django (comme `objects = models.Manager()` ou `request.user`).
+- **Typique :** Indispensable pour utiliser `pylint` efficacement sur des projets Django.
+
+---
+
+### 🔍 `pylint-celery`
+- **Quoi :** Une extension de `pylint` adaptée pour **les projets utilisant Celery**.
+- **À quoi ça sert :**
+  - Aider à vérifier que ton code **asynchrone** basé sur **Celery** est correct.
+  - Comprendre les décorateurs spécifiques de tâches (`@task`, etc.).
+- **Typique :** À utiliser si tu développes des **tâches asynchrones** avec Celery dans Django ou autre.
+
+---
+
+### ✨ Résumé ultra rapide
+
+| Extension         | Sert à                                      |
+|-------------------|---------------------------------------------|
+| `django-ckeditor` | Ajouter un éditeur WYSIWYG dans Django      |
+| `Pillow`          | Manipuler des images en Python              |
+| `pylint`          | Analyser et améliorer le code Python        |
+| `pylint-django`   | Spécialiser pylint pour les projets Django  |
+| `pylint-celery`   | Spécialiser pylint pour Celery              |
+
+---

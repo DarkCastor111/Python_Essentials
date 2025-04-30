@@ -1,5 +1,10 @@
 {% extends 'core/base.html' %}
+
 {% block titulo %}Portada{% endblock %}
-{% block contenido %}
-<h2>Portada</h2>
+
+{% block img-back %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+{% block cabecera %}
+<h1>Christophe Catoire</h1>
+<span class="subheading">Ingeniero Superior</span>
 {% endblock %}

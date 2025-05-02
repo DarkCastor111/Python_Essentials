@@ -7,9 +7,6 @@ def inicio(request):
 def historia(request):
     return render(request, "core/about.html")
 
-def servicios(request):
-    return render(request, "core/services.html")
-
 def visitanos(request):
     return render(request, "core/store.html")
 

@@ -13,9 +13,6 @@ def visitanos(request):
 def contacto(request):
     return render(request, "core/contact.html")
 
-def blog(request):
-    return render(request, "core/blog.html")
-
 def ejemplo(request):
     return render(request, "core/sample.html")
 

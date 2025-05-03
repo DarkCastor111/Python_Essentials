@@ -55,7 +55,7 @@
             <li class="nav-item px-lg-4 {% if request.resolver_match.view_name == 'nm_contacto'  %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'nm_contacto' %}">Contacto</a>
             </li>
-            <li class="nav-item px-lg-4 {% if request.resolver_match.view_name == 'nm_blog'  %}active{% endif %}">
+            <li class="nav-item px-lg-4 {% if request.resolver_match.view_name|slice:':7' == 'nm_blog' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'nm_blog' %}">Blog</a>
             </li>
           </ul>

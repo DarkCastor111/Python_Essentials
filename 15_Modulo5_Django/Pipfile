@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-ckeditor = "*"
 pillow = "*"
 pylint = "*"
 pylint-django = "*"
 pylint-celery = "*"
+django-ckeditor = "*"
 
 [dev-packages]
 

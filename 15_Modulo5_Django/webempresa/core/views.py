@@ -10,7 +10,5 @@ def historia(request):
 def visitanos(request):
     return render(request, "core/store.html")
 
-def contacto(request):
-    return render(request, "core/contact.html")
 
 

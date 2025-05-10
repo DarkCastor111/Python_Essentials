@@ -1,0 +1,7 @@
+Questions Django
+Utilité de répéter la app dans les répertoires static et templates
+Configuration du settings.py
+
+https://github.com/hektorprofe/curso-python-udemy/tree/master
+
+Class Meta : paramêtres possibles
